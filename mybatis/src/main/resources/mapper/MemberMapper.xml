@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.MemberMapper">
+    <resultMap id="memberResult" type="com.example.demo.model.Member">
+        <result column="name" property="name"/>
+        <result column="email" property="email"/>
+        <result column="age" property="age"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="memberResult">
+        SELECT * FROM member
+    </select>
+
+    <select id="selectById">
+        SELECT * FROM member WHERE id=#{id}
+    </select>
+
+    <select id="selectByEmail">
+        SELECT * FROM member WHERE email=#{email}
+    </select>
+
+    <select id="selectAllOrderByAgeAsc">
+        SELECT * FROM member ORDER BY age ASC
+    </select>
+
+    <!--
+        #{} : Prepared Statement에 의한 Parameter 치환으로 컬럼에만 사용 가능
+        ${} : SQL 치환으로 컬럼 이외에도 사용 가능하지만 SQL Injection을 주의해야 한다.
+    -->
+    <select id="selectAllOrderBy">
+        SELECT * FROM member ORDER BY ${order} ${dir}
+    </select>
+
+    <select id="selectAllCount">
+        SELECT COUNT(*) FROM member
+    </select>
+
+    <select id="selectByNameLike">
+        SELECT * FROM member WHERE name LIKE #{name}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="member.id" keyColumn="id">
+        INSERT INTO member(name, email, age) VALUES(#{member.name}, #{member.email}, #{member.age})
+    </insert>
+
+    <update id="update">
+        UPDATE member SET name=#{member.name}, email=#{member.email}, age=#{member.age} WHERE id=#{member.id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM member WHERE id=#{member.id}
+    </delete>
+
+    <delete id="deleteById">
+        DELETE FROM member WHERE id=#{id}
+    </delete>
+
+    <delete id="deleteAll">
+        DELETE FROM member
+    </delete>
+</mapper>
