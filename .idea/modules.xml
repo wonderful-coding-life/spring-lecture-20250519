@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lombok.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lombok.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-jdbc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-jdbc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-lecture-20250519.iml" filepath="$PROJECT_DIR$/spring-lecture-20250519.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-article-security.main.iml" filepath="$PROJECT_DIR$/.idea/modules/web-article-security.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-article.main.iml" filepath="$PROJECT_DIR$/.idea/modules/web-article.main.iml" />
     </modules>
   </component>
 </project>
