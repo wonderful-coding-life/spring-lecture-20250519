@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+<ul>
+    <li><a href="/message">메시지 테스트</a></li>
+    <li><a href="/message" th:href="@{/message}">메시지 테스트</a></li>
+    <li><a href="/link" th:href="@{/link/path/{id}(id=${linkId})}">경로 변수 링크 테스트</a></li>
+    <li><a href="/link" th:href="@{/link/param(id=${linkId})}">파라미터 링크 테스트</a></li>
+</ul>
+</body>
+</html>

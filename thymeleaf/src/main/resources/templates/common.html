@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>공통 레이아웃</title>
+</head>
+<body>
+<div th:fragment = "header">
+    <p style="background-color: black; color: white; padding: 20px;">
+        캠퍼스 FILE EDIT HELP
+    </p>
+</div>
+
+<div th:fragment = "footer">
+    <p style="background-color: black; color: white; padding: 20px;">
+        Copyright 2024 Wonderful Coding Life
+    </p>
+</div>
+
+<div th:fragment = "header-with-param (menu)">
+    <p style="background-color: black; color: white; padding: 20px;">
+        캠퍼스 FILE <span th:text="${menu}">EDIT</span> HELP
+    </p>
+</div>
+
+</body>
+</html>

@@ -7,13 +7,25 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar" />
         </processorPath>
-        <module name="crud-article.main" />
+        <module name="open-ai.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.example.demo" target="21" />
+      <module name="com.example.demo.main" target="21" />
+      <module name="com.example.demo.test" target="21" />
       <module name="demo" target="21" />
       <module name="demo.main" target="21" />
       <module name="demo.test" target="21" />
+      <module name="open-ai.demo" target="21" />
+      <module name="open-ai.demo.main" target="21" />
+      <module name="open-ai.demo.test" target="21" />
+      <module name="thymeleaf.demo" target="21" />
+      <module name="thymeleaf.demo.main" target="21" />
+      <module name="thymeleaf.demo.test" target="21" />
+      <module name="web-member-security.demo" target="21" />
+      <module name="web-member-security.demo.main" target="21" />
+      <module name="web-member-security.demo.test" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -21,6 +33,9 @@
       <module name="aop" options="-parameters" />
       <module name="aop.main" options="-parameters" />
       <module name="aop.test" options="-parameters" />
+      <module name="com.example.demo" options="-parameters" />
+      <module name="com.example.demo.main" options="-parameters" />
+      <module name="com.example.demo.test" options="-parameters" />
       <module name="crud-article" options="-parameters" />
       <module name="crud-article.main" options="-parameters" />
       <module name="crud-article.test" options="-parameters" />
@@ -48,9 +63,33 @@
       <module name="mybatis" options="-parameters" />
       <module name="mybatis.main" options="-parameters" />
       <module name="mybatis.test" options="-parameters" />
+      <module name="open-ai" options="-parameters" />
+      <module name="open-ai.demo" options="-parameters" />
+      <module name="open-ai.demo.main" options="-parameters" />
+      <module name="open-ai.demo.test" options="-parameters" />
+      <module name="open-ai.main" options="-parameters" />
+      <module name="open-ai.test" options="-parameters" />
       <module name="spring-jdbc" options="-parameters" />
       <module name="spring-jdbc.main" options="-parameters" />
       <module name="spring-jdbc.test" options="-parameters" />
+      <module name="thymeleaf" options="-parameters" />
+      <module name="thymeleaf.demo" options="-parameters" />
+      <module name="thymeleaf.demo.main" options="-parameters" />
+      <module name="thymeleaf.demo.test" options="-parameters" />
+      <module name="thymeleaf.main" options="-parameters" />
+      <module name="thymeleaf.test" options="-parameters" />
+      <module name="web-article" options="-parameters" />
+      <module name="web-article-security" options="-parameters" />
+      <module name="web-article-security.main" options="-parameters" />
+      <module name="web-article-security.test" options="-parameters" />
+      <module name="web-article.main" options="-parameters" />
+      <module name="web-article.test" options="-parameters" />
+      <module name="web-member-security" options="-parameters" />
+      <module name="web-member-security.demo" options="-parameters" />
+      <module name="web-member-security.demo.main" options="-parameters" />
+      <module name="web-member-security.demo.test" options="-parameters" />
+      <module name="web-member-security.main" options="-parameters" />
+      <module name="web-member-security.test" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,33 @@
+# docker compose up
+# docker compose up -d
+# in PhpMyAdmin, select database and export, import a dump file
+name: demo
+services:
+  app:
+    image: campus/demo
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      profiles: docker,health
+  db:
+    image: mysql
+    restart: always
+    volumes:
+      - db-volume:/var/lib/mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypass
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8000:80
+    depends_on:
+      - db
+volumes:
+  db-volume:

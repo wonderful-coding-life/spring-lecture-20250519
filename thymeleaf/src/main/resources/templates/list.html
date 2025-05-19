@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+<!-- Iteration -->
+<table>
+    <tr th:each="member : ${members}">
+        <td th:text="${member.name}">윤서준</td>
+        <td th:text="${member.email}">SeojoonYun@hanbit.co.kr</td>
+        <td th:text="${member.age}">10</td>
+    </tr>
+</table>
+<br>
+<!--Iteration Status
+${iteration.index} - start from 0
+${iteration.count} - start from 1
+${iteration.size} - size
+${iteration.even} - true if even
+${iteration.odd} - true if odd
+${iteration.first} - true if first iteration
+${iteration.last} - true if last iteration
+-->
+<table>
+    <tr th:each="member, iteration : ${members}" th:style="${iteration.odd}?'background-color: lightgray;'">
+        <td th:text="${iteration.count}">1</td>
+        <td th:text="${member.email}">SeojoonYun@hanbit.co.kr</td>
+        <td th:text="${member.age}">10</td>
+    </tr>
+</table>
+<br>
+
+<th:block th:each="member : ${members}">
+    <p>
+        이름: <span th:text="${member.name}">윤서준</span>
+        이메일: <span th:text="${member.email}">SeojunYoon@hanbit.co.kr</span>
+        나이: <span th:text="${member.age}">11</span>
+    </p>
+</th:block>
+</body>
+</html>

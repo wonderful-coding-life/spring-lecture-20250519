@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+
+<p th:if="${showHelloOne}">
+    안녕하세요 반갑습니다 HELLO #1
+</p>
+
+<p th:if="${showHelloTwo}">
+    안녕하세요 반갑습니다 HELLO #2
+</p>
+
+<p th:if="${showHelloOne} and !${showHelloTwo}">
+    안녕하세요 반갑습니다 HELLO #3
+</p>
+
+<p th:if="${showHelloThree} == null">
+    안녕하세요 반갑습니다 HELLO #4
+</p>
+
+</body>
+</html>

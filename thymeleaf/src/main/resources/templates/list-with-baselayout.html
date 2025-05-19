@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base-layout :: layout( ~{::title}, ~{::link}, ~{::section}, '고객목록' )}">
+<head>
+    <meta charset="UTF-8">
+    <title>고객관리</title>
+    <link href="https://css.gg/css" rel="stylesheet"/>
+</head>
+<body>
+<section>
+    <p><i class="gg-airplane"></i>캠퍼스 고객관리</p>
+    <table>
+        <tr th:each="member : ${members}">
+            <td th:text="${member.name}">윤서준</td>
+            <td th:text="${member.email}">SeojoonYun@hanbit.co.kr</td>
+            <td th:text="${member.age}">10</td>
+        </tr>
+    </table>
+    <br>
+</section>
+</body>
+</html>

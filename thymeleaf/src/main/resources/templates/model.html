@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+
+<!-- Variable Expression -->
+<p th:text="${name}">공미영</p>
+<p th:text="${email}">MiyoungKong@hanbit.co.kr</p>
+<p th:text="${member.name}">공미영</p>
+<p th:text="${member.email}">MiyoungKong@hanbit.co.kr</p>
+<p th:text="${member.age}">23</p>
+
+<!-- Selection -->
+<ul>
+    <li th:text="${member.name}">name</li>
+    <li th:text="${member.email}">phone</li>
+    <li th:text="${member.age}">address</li>
+</ul><br>
+
+<ul th:object="${member}">
+    <li th:text="*{name}">name</li>
+    <li th:text="*{email}">phone</li>
+    <li th:text="*{age}">address</li>
+</ul><br>
+<br>
+</body>
+</html>

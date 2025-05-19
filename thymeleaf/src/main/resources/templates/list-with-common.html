@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+<div th:replace = "~{ common :: header }"></div>
+<!-- <div th:replace = "~{ common :: header-with-param('고객목록') }"></div> -->
+
+<!-- Iteration -->
+<table>
+    <tr th:each="member : ${members}">
+        <td th:text="${member.name}">윤서준</td>
+        <td th:text="${member.email}">SeojoonYun@hanbit.co.kr</td>
+        <td th:text="${member.age}">10</td>
+    </tr>
+</table>
+<div th:replace = "~{ common :: footer }"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(title, links, content, menu)">
+<head>
+    <title th:replace="${title}">Title</title>
+    <th:block th:replace="${links}"></th:block>
+</head>
+<body>
+<div>
+    <p style="background-color: black; color: white; padding: 20px;">
+        캠퍼스 FILE <span th:text="${menu}">EDIT</span> HELP
+    </p>
+</div>
+<div th:replace="${content}"></div>
+<p style="background-color: black; color: white; padding: 20px;">
+    Copyright 2024 Wonderful Coding Life
+</p>
+</body>
+</html>

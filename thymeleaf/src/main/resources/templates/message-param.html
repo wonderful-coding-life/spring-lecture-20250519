@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+    <p th:text="#{home.member.one(${name}, ${email})}">메시지 파라미터 테스트</p>
+    <p th:text="#{${messageKey}(${name}, ${email})}">메시지 자체도 파라미터로 전달하는 테스트</p>
+</body>
+</html>

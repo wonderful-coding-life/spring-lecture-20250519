@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+
+<p th:text="${#calendars.format(date,'yyyy-MM-dd')}">
+    2022년 12월 25일
+</p>
+
+<!-- formatDecimal(숫자, 최소 표시 자리 수, 소수점 이하 자리 수, 세자리마다 콤마 여부 'COMMA') -->
+<p th:text="${#numbers.formatDecimal(productPrice, 1, 2)}">
+    3.14
+</p>
+<p th:text="${#numbers.formatDecimal(productPrice, 10, 2)}">
+    3.14
+</p>
+
+<!-- formatInteger(정수, 최소 표시 자리 수, 세자리마다 콤마 여부 'COMMA') -->
+<p th:text="${#numbers.formatInteger(productCount, 1, 'COMMA')}">
+    100
+</p>
+<p th:text="${#numbers.formatInteger(productCount, 10)}">
+    100
+</p>
+
+</body>
+</html>
